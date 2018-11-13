@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Basket</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="img/logo.png"> <!-- фавиконка -->
+    <link rel="stylesheet" href="css/main.css"> <!-- Подключаем CSS -->
+    <link rel="stylesheet" href="css/libs.min.css">
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+
+<section class="content">
+    <div class="basket__inform">
+        <div class="basket__value"><h1>Корзина</h1> <span class="value">12</span></div>
+        <div class="explanations">Организуйте тендер между выбранными компаниями.
+            Приглашайте компании в новый или текущий тендер в один клик.
+            Отобранные компании хранятся по отдельным вкладкам.
+        </div>
+    </div>
+    <div class="basket__menu">
+        <ul class="menu__items">
+            <li>
+                <button type="button" class="menu__item active">Разработка сайтов<span class="amount">7</span></button>
+            </li>
+            <li>
+                <button type="button" class="menu__item">Поисковая оптимизация</button>
+            </li>
+            <li>
+                <button type="button" class="menu__item">Разработка приложений</button>
+            </li>
+            <li>
+                <button type="button" class="menu__item">Контекстная реклама</button>
+            </li>
+            <li>
+                <button type="button" class="menu__item">Маркетинг, SMM, PR</button>
+            </li>
+        </ul>
+    </div>
+    <hr class="separator">
+    <table class="basket__table">
+        <tr class="tr">
+            <th class="th">В тендере</th>
+            <th class="th">Агентство</th>
+            <th class="th">Город</th>
+            <th class="th">Ценовой сегмент</th>
+            <th class="th">Проектов</th>
+            <th class="th">Лет на рынке</th>
+        </tr>
+
+        <tr>
+            <td>
+                <div class="checkbox ">
+                    <div class="check">
+                        <label for="mark"></label>
+                        <input type="checkbox" id="mark">
+                    </div>
+                </div>
+            </td>
+            <td>3,5</td>
+            <td>36</td>
+            <td>23</td>
+        </tr>
+    </table>
+</section>
+
+
+</body>
+</html>
