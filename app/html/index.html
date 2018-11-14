@@ -20,52 +20,269 @@
             Отобранные компании хранятся по отдельным вкладкам.
         </div>
     </div>
-    <div class="basket__menu">
-        <ul class="menu__items">
+    <div class="basket__menu" id="wr-tabs">
+        <ul class="menu__items tabs">
             <li>
-                <button type="button" class="menu__item active">Разработка сайтов<span class="amount">7</span></button>
+                <button type="button" class="menu__item  tab active">Разработка сайтов<span class="amount">7</span></button>
             </li>
             <li>
-                <button type="button" class="menu__item">Поисковая оптимизация</button>
+                <button type="button" class="menu__item tab">Поисковая оптимизация<span class="amount">0</span></button>
             </li>
             <li>
-                <button type="button" class="menu__item">Разработка приложений</button>
+                <button type="button" class="menu__item tab">Разработка приложений<span class="amount">0</span></button>
             </li>
             <li>
-                <button type="button" class="menu__item">Контекстная реклама</button>
+                <button type="button" class="menu__item tab">Контекстная реклама<span class="amount">0</span></button>
             </li>
             <li>
-                <button type="button" class="menu__item">Маркетинг, SMM, PR</button>
+                <button type="button" class="menu__item tab">Маркетинг, SMM, PR<span class="amount">0</span></button>
             </li>
         </ul>
     </div>
     <hr class="separator">
+    <div class="basket__content">
+        <div class="tab-cont">
     <table class="basket__table">
         <tr class="tr">
             <th class="th">В тендере</th>
             <th class="th">Агентство</th>
             <th class="th">Город</th>
-            <th class="th">Ценовой сегмент</th>
+            <th class="th sorting"> <button type="button">Ценовой сегмент</button> </th>
             <th class="th">Проектов</th>
             <th class="th">Лет на рынке</th>
         </tr>
 
-        <tr>
-            <td>
-                <div class="checkbox ">
-                    <div class="check">
-                        <label for="mark"></label>
-                        <input type="checkbox" id="mark">
+        <tr class="tr">
+            <td class="td">
+                <div class=" card__check">
+                    <div class="checkbox">
+                        <div class="check check_active">
+                            <label for="check1"></label>
+                            <input type="checkbox" id="check1">
+
+                        </div>
                     </div>
+                    <div class="card__img">
+                        <img src="../img/content/cons.png" alt=""></div>
                 </div>
             </td>
-            <td>3,5</td>
-            <td>36</td>
-            <td>23</td>
+            <td class="td">
+                <div class="nameCompany pro">
+                    <a href="">RuNetSoft</a>
+                </div>
+            </td>
+            <td class="td"><p>Смоленск</p></td>
+            <td class="td">
+                <div class="priceSegment price0"></div>
+            </td>
+            <td class="td">163</td>
+            <td class="td">8 лет</td>
+        </tr>
+        <tr class="tr">
+            <td class="td">
+                <div class=" card__check">
+                    <div class="checkbox">
+                        <div class="check">
+                            <label for="check2"></label>
+                            <input type="checkbox" id="check2">
+                        </div>
+                    </div>
+                    <div class="card__img">
+                        <img src="../img/content/cons2.png" alt=""></div>
+                </div>
+            </td>
+            <td class="td">
+                <div class="nameCompany pro">
+                    <a href="">Клондайк</a>
+                </div>
+            </td>
+            <td class="td"><p>Москва</p></td>
+            <td class="td">
+                <div class="priceSegment price1"></div>
+            </td>
+            <td class="td">163</td>
+            <td class="td">3 года</td>
+        </tr>
+        <tr class="tr">
+            <td class="td">
+                <div class=" card__check">
+                    <div class="checkbox">
+                        <div class="check">
+                            <label for="check3"></label>
+                            <input type="checkbox" id="check3">
+                        </div>
+                    </div>
+                    <div class="card__img">
+                        <img src="../img/content/cons3.png" alt=""></div>
+                </div>
+            </td>
+            <td class="td">
+                <div class="nameCompany pro">
+                    <a href="">Cetera Labs</a>
+                </div>
+            </td>
+            <td class="td"><p>Ижевск</p></td>
+            <td class="td">
+                <div class="priceSegment price2"></div>
+            </td>
+            <td class="td">163</td>
+            <td class="td">8 лет</td>
+        </tr>
+        <tr class="tr">
+            <td class="td">
+                <div class=" card__check">
+                    <div class="checkbox">
+                        <div class="check">
+                            <label for="check4"></label>
+                            <input type="checkbox" id="check4">
+                        </div>
+                    </div>
+                    <div class="card__img">
+                        <img src="../img/content/cons4.png" alt=""></div>
+                </div>
+            </td>
+            <td class="td">
+                <div class="nameCompany">
+                    <a href="">Технологии успеха</a>
+                </div>
+            </td>
+            <td class="td"><p>Минск</p></td>
+            <td class="td">
+                <div class="priceSegment price3"></div>
+            </td>
+            <td class="td">163</td>
+            <td class="td">8 лет</td>
+        </tr>
+        <tr class="tr">
+            <td class="td">
+                <div class=" card__check">
+                    <div class="checkbox">
+                        <div class="check">
+                            <label for="check5"></label>
+                            <input type="checkbox" id="check5">
+                        </div>
+                    </div>
+                    <div class="card__img">
+                        <img src="../img/content/cons.png" alt=""></div>
+                </div>
+            </td>
+            <td class="td">
+                <div class="nameCompany">
+                    <a href="">ЮниВеб</a>
+                </div>
+            </td>
+            <td class="td"><p>Киев</p></td>
+            <td class="td">
+                <div class="priceSegment price4"></div>
+            </td>
+            <td class="td">163</td>
+            <td class="td">8 лет</td>
+        </tr>
+        <tr class="tr">
+            <td class="td">
+                <div class=" card__check">
+                    <div class="checkbox">
+                        <div class="check">
+                            <label for="check6"></label>
+                            <input type="checkbox" id="check6">
+                        </div>
+                    </div>
+                    <div class="card__img">
+                        <img src="../img/content/cons2.png" alt=""></div>
+                </div>
+            </td>
+            <td class="td">
+                <div class="nameCompany pro">
+                    <a href="">Seven Winds Studio</a>
+                </div>
+            </td>
+            <td class="td"><p>Новороссийск</p></td>
+            <td class="td">
+                <div class="priceSegment price5"></div>
+            </td>
+            <td class="td">163</td>
+            <td class="td">8 лет</td>
+        </tr>
+        <tr class="tr">
+            <td class="td">
+                <div class=" card__check">
+                    <div class="checkbox">
+                        <div class="check">
+                            <label for="check7"></label>
+                            <input type="checkbox" id="check7">
+                        </div>
+                    </div>
+                    <div class="card__img">
+                        <img src="../img/content/cons4.png" alt=""></div>
+                </div>
+            </td>
+            <td class="td">
+                <div class="nameCompany">
+                    <a href="">Технологии успеха</a>
+                </div>
+            </td>
+            <td class="td"><p>Минск</p></td>
+            <td class="td">
+                <div class="priceSegment price3"></div>
+            </td>
+            <td class="td">163</td>
+            <td class="td">8 лет</td>
+        </tr>
+        <tr class="tr">
+            <td class="td">
+                <div class=" card__check">
+                    <div class="checkbox">
+                        <div class="check">
+                            <label for="check8"></label>
+                            <input type="checkbox" id="check8">
+                        </div>
+                    </div>
+                    <div class="card__img">
+                        <img src="../img/content/cons3.png" alt=""></div>
+                </div>
+            </td>
+            <td class="td">
+                <div class="nameCompany">
+                    <a href="">ЮниВеб</a>
+                </div>
+            </td>
+            <td class="td"><p>Киев</p></td>
+            <td class="td">
+                <div class="priceSegment price4"></div>
+            </td>
+            <td class="td">163</td>
+            <td class="td">8 лет</td>
+        </tr>
+        <tr class="tr">
+            <td class="td">
+                <div class=" card__check">
+                    <div class="checkbox">
+                        <div class="check">
+                            <label for="check9"></label>
+                            <input type="checkbox" id="check9">
+                        </div>
+                    </div>
+                    <div class="card__img">
+                        <img src="../img/content/cons.png" alt=""></div>
+                </div>
+            </td>
+            <td class="td">
+                <div class="nameCompany">
+                    <a href="">Бинн</a>
+                </div>
+            </td>
+            <td class="td"><p>Новороссийск</p></td>
+            <td class="td">
+                <div class="priceSegment price4"></div>
+            </td>
+            <td class="td">163</td>
+            <td class="td">8 лет</td>
         </tr>
     </table>
+        </div>
+        <div class="tab-cont">лалал </div>
+        </div>
 </section>
-
-
+<footer></footer>
 </body>
 </html>
