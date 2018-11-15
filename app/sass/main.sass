@@ -3,11 +3,13 @@
   src: url('../fonts/proximaNova/ProximaNovaCond-Regular.woff') format('woff')
   font-weight: normal
   font-style: normal
+
 @font-face
   font-family: 'ProximaNova-Extrabld'
   src: url('../fonts/proximaNova/ProximaNova-Extrabld.woff') format('woff')
   font-weight: 800
   font-style: normal
+
 @font-face
   font-family: 'ProximaNovaLt'
   src: url('../fonts/proximaNova/ProximaNova-Semibold.woff') format('woff')
@@ -22,11 +24,12 @@ html
   margin: 0
   font-size: 10px
   line-height: 1.375
+  letter-spacing: normal
 
 body
   margin: 0
   background-color: #f1f1f1
-  font-family: ProximaNova
+  font-family: ProximaNova, sans-serif
 
 ul
   overflow: hidden
@@ -39,7 +42,6 @@ ul
 
 a, a:visited
   text-decoration: none
-  color: #000000
 
 p
   margin: 0 0
@@ -50,6 +52,7 @@ h1
   font-size: 4.5rem
   display: inline-block
   margin-right: 10px
+
 button
   border: 0
   background: 0
@@ -58,8 +61,12 @@ button
 table
   border-collapse: collapse
 
-//td, th
-//  border: 1px solid black
+footer
+  height: 50px
+
+button
+  background: transparent
+  border: none
 
 .checkbox
   display: flex
@@ -74,11 +81,7 @@ table
   overflow: hidden
 
 .checkbox input
-  position: absolute
-  top: -50px
-  left: -50px
-  z-index: -1
-
+  display: none
 
 .checkbox label
   display: block
@@ -87,18 +90,17 @@ table
   border-radius: 4px
   background-color: #0682fe
   position: relative
-
-.checkbox label:before
-  display: none
-  content: ''
-  position: absolute
-  top: 7px
-  left: 6px
-  width: 16.9px
-  height: 8.4px
-  border-left: solid 2px #ffffff
-  border-bottom: solid 2px #ffffff
-  transform: rotate(-50deg)
+  &::before
+    display: none
+    content: ''
+    position: absolute
+    top: 7px
+    left: 6px
+    width: 16.9px
+    height: 8.4px
+    border-left: solid 2px #ffffff
+    border-bottom: solid 2px #ffffff
+    transform: rotate(-50deg)
 
 .checkbox .check_active label:before
   display: block
@@ -106,7 +108,7 @@ table
 .content
   width: 100%
   display: flex
-  flex-direction: column
+  flex-flow: column nowrap
   justify-content: center
   align-items: center
 
@@ -114,7 +116,7 @@ table
   max-width: 1111px
   width: 1111px
   display: flex
-  flex-direction: row
+  flex-flow: row nowrap
   justify-content: space-between
   align-items: center
   margin-bottom: 97px
@@ -140,65 +142,67 @@ table
 .basket__menu
   max-width: 1111px
   width: 1111px
+
 .menu__items
   display: flex
-  flex-direction: row
+  flex-flow: row nowrap
   justify-content: space-around
   align-items: center
 
 .menu__item
-  font-size: 17px
+  font-size: 1.7rem
   font-weight: bold
   line-height: 1.06
   color: #16b1ef
   padding-bottom: 10px
   border-bottom: solid 1.5px transparent
   font-family: ProximaNovaLt
+  &:hover,
+  &:focus,
+  &.active
+    color: #292929
+    cursor: pointer
+    border-bottom: solid 1.5px #2a2a2a
+
 .amount
-  font-size: 16px
-  font-weight: normal
+  font-size: 1.6rem
   line-height: 0.88
   padding-left: 5px
 
-.menu__item:hover, .menu__item:focus, .active
-  color: #292929
-  cursor: pointer
-  border-bottom: solid 1.5px #2a2a2a
+.filled
+  width: 1111px
 
 .basket__table
-  width: 1111px
+  display: none
+  width: 100%
   border-radius: 6px
   box-shadow: 0 6px 13px 0 rgba(0, 0, 0, 0.06)
   background-color: #ffffff
+  .tr
+    border-bottom: 1px solid #d8d8d8
+  .tr:first-child,
+  .tr:last-child
+    border-bottom: none
+  .tr .th
+    padding: 14px 24px
+  .tr .th,
+  .sorting button
+    font-size: 1.4rem
+    line-height: 1.57
+    letter-spacing: 0.6px
+    color: #aaaeb3
+    text-align: left
+    text-transform: uppercase
+  .tr .td
+    padding-left: 25px
+    height: 100px
+    font-size: 2.0rem
+    line-height: 1.1
+    color: #292929
 
+.filled .basket__table
+  display: table
 
-.basket__table .tr .th, .sorting button
-  font-size: 14px
-  line-height: 1.57
-  letter-spacing: 0.6px
-  color: #aaaeb3
-  text-align: left
-  text-transform: uppercase
-
-.basket__table .tr .th
-  padding: 14px 24px
-
-.basket__table .tr
-  border-bottom: 1px solid #d8d8d8
-
-.basket__table .tr:first-child, .tr:last-child
-  border-bottom: none
-
-.basket__table .tr .td
-  padding-left: 25px
-  height: 100px
-  font-size: 20px
-  font-weight: normal
-  font-style: normal
-  font-stretch: normal
-  line-height: 1.1
-  letter-spacing: normal
-  color: #292929
 
 .card__check
   display: flex
@@ -212,27 +216,24 @@ table
   display: flex
   align-items: center
   justify-content: center
+  img
+    width: auto
 
-.card__img img
-  width: auto
 
 .nameCompany
   display: flex
   flex-flow: row nowrap
   padding-right: 46px
-
-
-.nameCompany a
-  font-size: 2.0rem
-  font-weight: bold
-  line-height: 1.1
-  color: #292929
-  border-bottom: solid 1px #c1c1c1
-  position: relative
-
-
-.nameCompany a:focus, a:hover
-  border-bottom: solid 1px transparent
+  a
+    font-size: 2.0rem
+    font-weight: bold
+    line-height: 1.1
+    color: #292929
+    border-bottom: solid 1px #c1c1c1
+    position: relative
+  a:focus,
+  a:hover
+    border-bottom: solid 1px transparent
 
 .pro a:before
   content: 'Pro'
@@ -240,10 +241,8 @@ table
   width: 36px
   height: 19px
   background-color: #fdb815
-  font-size: 13px
+  font-size: 1.3rem
   font-weight: 600
-  font-style: normal
-  font-stretch: normal
   line-height: 1.46
   letter-spacing: 0.5px
   color: #2a2a2a
@@ -251,51 +250,115 @@ table
   text-align: center
   top: -8px
   right: -43px
+  cursor: default
 
 .priceSegment
-  width: 62px
+  width: 65px
   height: 14px
+  display: flex
+  flex-flow: row nowrap
+  justify-content: left
+  align-items: center
+  .priceItems
+    width: 10px
+    height: 13px
+    margin-right: 3px
+    background: url("../img/desing/price-empty.svg")
 
-.price5
-  background: url("../img/desing/css_sprites1.png") no-repeat 0px 0px
-.price4
-  background: url("../img/desing/css_sprites1.png") no-repeat -13px 0px
-.price3
-  background: url("../img/desing/css_sprites1.png") no-repeat -24px 0px
-.price2
-  background: url("../img/desing/css_sprites1.png") no-repeat -35px 0px
-.price1
-  background: url("../img/desing/css_sprites1.png") no-repeat -49px 0px
-.price0
-  background: url("../img/desing/css_sprites1.png") no-repeat -62px 0px
+.priceSegment[data-price="0"] .priceItems
+  background: url("../img/desing/price-empty.svg")
 
-footer
-  height: 50px
-button
-  background: transparent
-  border: none
+.priceSegment[data-price="1"] .priceItems:nth-child(-n+1)
+  background: url("../img/desing/price-filled.svg")
+
+.priceSegment[data-price="2"] .priceItems:nth-child(-n+2)
+  background: url("../img/desing/price-filled.svg")
+
+.priceSegment[data-price="3"] .priceItems:nth-child(-n+3)
+  background: url("../img/desing/price-filled.svg")
+
+.priceSegment[data-price="4"] .priceItems:nth-child(-n+4)
+  background: url("../img/desing/price-filled.svg")
+
+.priceSegment[data-price="5"] .priceItems
+  background: url("../img/desing/price-filled.svg")
 
 .sorting button
   position: relative
   cursor: pointer
   padding-right: 16px
+  &::before
+    width: 11px
+    height: 7px
+    content: ''
+    position: absolute
+    background: url("../img/desing/arrow.svg") no-repeat
+    margin-left: 10px
+    top: 8px
+    right: 0
+    cursor: pointer
 
-.sorting button:before
-  width: 11px
-  height: 7px
-  content: ''
-  position: absolute
-  background: url("../img/desing/arrow.png") no-repeat
-  margin-left: 10px
-  top: 8px
-  right: 0
-  cursor: pointer
 .descending button:before
   transform: rotate(180deg)
 
 #wr-tabs .basket__content .tab-cont
   display: none
+  &.active
+    display: block
 
-#wr-tabs .basket__content .tab-cont.active
+.basketEmpty__block
+  display: none
+  width: 1111px
+  height: 278px
+  border-radius: 6px
+  box-shadow: 0 6px 13px 0 rgba(0, 0, 0, 0.06)
+  background-color: #ffffff
+  margin: 35px 0
+
+.empty .basketEmpty__block
   display: block
+
+.basketEmpty__content
+  width: 100%
+  height: 100%
+  display: flex
+  flex-flow: column nowrap
+  justify-content: space-between
+  align-items: center
+  padding: 39px 0
+
+.emptyInform
+  text-align: center
+
+.emptyImg
+  width: 104px
+  height: 92px
+  opacity: 0.71
+
+.emptyP
+  font-size: 1.8rem
+  line-height: 1.61
+  text-align: center
+  color: #ababab
+
+.emptyLink
+  font-size: 1.8rem
+  font-weight: bold
+  line-height: 1.61
+  text-align: right
+  color: #02bff2
+  position: relative
+  border-bottom: solid 1px transparent
+  &:hover,
+  &:focus
+    border-bottom: solid 1px #02bff2
+  &::before
+    position: absolute
+    content: ''
+    width: 9px
+    height: 15px
+    background: url("../img/desing/arrow-blue.svg") no-repeat
+    top: 8px
+    right: -20px
+
 
