@@ -52,7 +52,8 @@ h1 {
   font-family: ProximaNova-Extrabld;
   font-size: 4.5rem;
   display: inline-block;
-  margin-right: 10px; }
+  margin-right: 10px;
+  color: #061e31; }
 
 button {
   border: 0;
